@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.Partidos.view.MainWindowController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="Partidos">
+          <items>
+            <MenuItem fx:id="menuAlta" mnemonicParsing="false" onAction="#altaPartido" text="AltaPartidos" />
+                  <MenuItem fx:id="menuBorrar" mnemonicParsing="false" onAction="#altaPartido" text="BorrarPartidos" />
+                  <MenuItem fx:id="menuModificar" mnemonicParsing="false" onAction="#altaPartido" text="ModificarPartidos" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TableView fx:id="tablaPartidos" layoutX="35.0" layoutY="18.0" prefHeight="302.0" prefWidth="559.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="46.0" AnchorPane.topAnchor="18.0">
+              <columns>
+                <TableColumn fx:id="TCLocal" prefWidth="123.0" text="Local" />
+                <TableColumn fx:id="TCVisitante" prefWidth="117.0" text="Visitante" />
+                  <TableColumn fx:id="TCResultado" prefWidth="79.0" text="Resultado" />
+                  <TableColumn fx:id="TCDivision" prefWidth="77.0" text="Division" />
+                  <TableColumn fx:id="TCFecha" prefWidth="118.0" text="Fecha" />
+              </columns>
+            </TableView>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
