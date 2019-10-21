@@ -27,7 +27,7 @@
             <TableView fx:id="tablaPartidos" layoutX="35.0" layoutY="18.0" prefHeight="302.0" prefWidth="559.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="46.0" AnchorPane.topAnchor="18.0">
               <columns>
                 <TableColumn fx:id="TCLocal" prefWidth="123.0" text="Local" >
-                  <cellValueFactory><PropertyValueFactory property="Local" ></cellValueFactory>
+                  <cellValueFactory><PropertyValueFactory property="Local" /> </cellValueFactory>
                 </TableColumn>
                 <TableColumn fx:id="TCVisitante" prefWidth="117.0" text="Visitante" >
                   <cellValueFactory><PropertyValueFactory property="Local" /></cellValueFactory>

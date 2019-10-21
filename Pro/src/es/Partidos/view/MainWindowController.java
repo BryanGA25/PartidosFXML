@@ -48,7 +48,8 @@ public class MainWindowController implements Initializable {
             FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("DialogoPartido.fxml"));
             Parent root = fxmlLoader.load();
             DialogoPartidoControlador controlador= fxmlLoader.getController();
-            controlador;
+            Partidos partidoMo=tablaPartidos.getSelectionModel().getSelectedItem();
+
             Stage stage =new Stage();
             stage.setTitle("Pantalla Principal");
             stage.initModality(Modality.WINDOW_MODAL);
