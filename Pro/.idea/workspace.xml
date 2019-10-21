@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dcac92a6-b399-41bd-85cb-699c9dca5ab0" name="Default Changelist" comment="" />
+    <list default="true" id="dcac92a6-b399-41bd-85cb-699c9dca5ab0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/es/Partidos/view/filters/filtrarTexto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pro/es/Partidos/view/DialogoPartido.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pro/es/Partidos/view/DialogoPartido.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pro/es/Partidos/view/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pro/es/Partidos/view/MainWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/Partidos/logica/Logica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/Partidos/logica/Logica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/Partidos/view/DialogoPartido.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/Partidos/view/DialogoPartido.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/Partidos/view/DialogoPartidoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/Partidos/view/DialogoPartidoControlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/Partidos/view/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/Partidos/view/MainWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/Partidos/view/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/Partidos/view/MainWindowController.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +31,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1SCGuWxXDxivU8WsATiQJRmUi9n" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -114,6 +127,31 @@
       <option name="presentableId" value="Default" />
       <updated>1571060386569</updated>
     </task>
+    <task id="LOCAL-00001" summary="Partidos primero día">
+      <created>1571332880979</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1571332880979</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Partidos primero día" />
+    <option name="LAST_COMMIT_MESSAGE" value="Partidos primero día" />
   </component>
 </project>

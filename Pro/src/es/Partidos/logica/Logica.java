@@ -38,16 +38,17 @@ public class Logica {
         listaPartidos.add(partidos);
 
     }
-    public void modificarPartido(Partidos partidos ,int id){
+    public void modificarPartido(Partidos partidos){
 
+        int id=listaPartidos.indexOf(partidos);
         listaPartidos.set(id,partidos);
 
     }
 
-    public void borraPartido(int id){
-       if (id>=0) {
-           listaPartidos.remove(id);
-       }
+    public void borraPartido(Partidos partido){
+
+           listaPartidos.remove(partido);
+
 
     }
     public ObservableList getListaPartidos(){
