@@ -51,25 +51,29 @@ public class DialogoPartidoControlador implements Initializable {
         tfResulLocal.setText(String.valueOf(partidoModificado.getResul().getLocal()));
         tfVisitante.setText(partidoModificado.getVisitante());
         tfResultadoVisitante.setText(String.valueOf(partidoModificado.getResul().getVisitante()));
+        dpFecha.setValue(Utils.convertirToLocalDate(partidoModificado.getDate()));
+        cbDivision.setValue(partidoModificado.getDivision());
     }
 
 
     public void altaModificarPartido(ActionEvent event) {
-        if (partidoModificar!=null)
-        {
-            partidoModificar.setDate(Utils.convertirToDate(dpFecha.getValue()));
-            partidoModificar.setDivision(cbDivision.getValue());
+        if (partidoModificar == null) {
+            Partidos partido = new Partidos(tfLocal.getText(),
+                    tfVisitante.getText(),
+                    new Resultado(Integer.parseInt(tfResulLocal.getText()), Integer.parseInt(tfResultadoVisitante.getText())),
+                    Utils.convertirToDate(dpFecha.getValue()) ,cbDivision.getValue());
+            Logica.getINSTANCE().addPartido(partido);
+        }
+        else{
             partidoModificar.setLocal(tfLocal.getText());
             partidoModificar.setVisitante(tfVisitante.getText());
-            partidoModificar.setResul(new Resultado(Integer.parseInt(String.valueOf(tfResulLocal)),Integer.parseInt(String.valueOf(tfResultadoVisitante))));
+            partidoModificar.setDivision(cbDivision.getValue());
+            partidoModificar.setResul(new Resultado(Integer.parseInt(tfResulLocal.getText()), Integer.parseInt(tfResultadoVisitante.getText())));
+            partidoModificar.setDate(Utils.convertirToDate(dpFecha.getValue()));
             Logica.getINSTANCE().modificarPartido(partidoModificar);
         }
-        else {
-
-        }
-        //Como obtener un Stage desde un evento
-        Stage stage = ((Stage)((Node)event.getSource()).getScene().getWindow());
-        stage.close();
+        //Obtener stage desde un evento
+        ((Stage)((Node)event.getSource()).getScene().getWindow()).close();
     }
 
 

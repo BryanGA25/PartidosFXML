@@ -7,29 +7,31 @@ import javafx.collections.ObservableList;
 
 public class filtrarTexto {
 
-    private ObservableList <Partidos> listaPartidos;
-    private ObservableList <Partidos> listaPartidosFiltrada;
+    private ObservableList<Partidos> listaPartidos;
+    private ObservableList<Partidos> listaPartidosFiltrada;
 
-    public filtrarTexto(ObservableList<Partidos>listaPartidos){
-        this.listaPartidos=listaPartidos;
-        listaPartidos= FXCollections.observableArrayList();
+    public filtrarTexto(ObservableList<Partidos> listaPartidos) {
+        this.listaPartidos = listaPartidos;
+        listaPartidos = FXCollections.observableArrayList();
     }
 
-    public void filtrar(String divFiltrada){
-        if(divFiltrada!=null && !"".equals(divFiltrada)){
+    public ObservableList<Partidos> filtrar(String divFiltrada) {
+        if (divFiltrada != null && !"".equals(divFiltrada)) {
 
+
+            return listaPartidos;
+
+        } else {
             listaPartidosFiltrada.clear();
-            for (Partidos partidos:listaPartidos){
-                if(partidos.getLocal().contains(divFiltrada)){
-                      listaPartidosFiltrada.add(partidos);
+            for (Partidos partidos : listaPartidos) {
+                if (partidos.getLocal().contains(divFiltrada)) {
+                    listaPartidosFiltrada.add(partidos);
+
                 }
 
             }
-
+                return listaPartidosFiltrada;
         }
-        else{
 
-        }
     }
-
 }

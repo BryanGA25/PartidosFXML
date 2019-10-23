@@ -2,6 +2,7 @@ package es.Partidos.view;
 
 import es.Partidos.logica.Logica;
 import es.Partidos.model.Partidos;
+import es.Partidos.view.filters.filtrarTexto;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -26,8 +27,10 @@ import java.util.ResourceBundle;
 
 public class MainWindowController implements Initializable {
 
-    public TextField filtrarTexto;
+    private es.Partidos.view.filters.filtrarTexto filtrarTexto2;
 
+    @FXML
+   private TextField filtrarTexto;
 
     @FXML
     private MenuItem menuAlta;
@@ -72,12 +75,12 @@ public class MainWindowController implements Initializable {
    @Override
    public void initialize(URL url, ResourceBundle resourceBundle) {
       tablaPartidos.setItems( Logica.getINSTANCE().getListaPartidos());
-
+       filtrarTexto2= new filtrarTexto(Logica.getINSTANCE().getListaPartidos());
         //siempre que se haga un cambio en el texto de filtrar texto nos notificara
       filtrarTexto.textProperty().addListener(new ChangeListener<String>() {
           @Override
           public void changed(ObservableValue<? extends String> observableValue, String oldValue, String newValue) {
-
+                tablaPartidos.setItems(filtrarTexto2.filtrar(newValue));
 
           }
       });
