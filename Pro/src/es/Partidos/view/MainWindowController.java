@@ -41,12 +41,16 @@ public class MainWindowController extends BaseController implements Initializabl
     @FXML
     void altaPartido(ActionEvent event) {
         cargarDialogo("FormularioPartidos.fxml", 700, 500).abrirDialogo(true);
-
+        filtrar();
     }
     @FXML
     void  modificarPartido(ActionEvent event){
 
-
+        DialogoPartidoControlador controlador=(DialogoPartidoControlador)cargarDialogo("DialogoPartido.fxml",550,450);
+        Partidos partido=tablaPartidos.getSelectionModel().getSelectedItem();
+        controlador.setPartidoModificado(partido);
+        controlador.abrirDialogo(true);
+        filtrar();
 
     }
 
@@ -55,7 +59,7 @@ public class MainWindowController extends BaseController implements Initializabl
       tablaPartidos.setItems( Logica.getINSTANCE().getListaPartidos());
        filtrarTexto2= new filtrarTexto(Logica.getINSTANCE().getListaPartidos());
         //siempre que se haga un cambio en el texto de filtrar texto nos notificara
-      filtrarTexto.textProperty().addListener(new ChangeListener<String>() {
+            filtrarTexto.textProperty().addListener(new ChangeListener<String>() {
           @Override
           public void changed(ObservableValue<? extends String> observableValue, String oldValue, String newValue) {
                 tablaPartidos.setItems(filtrarTexto2.filtrar(newValue));
@@ -64,5 +68,13 @@ public class MainWindowController extends BaseController implements Initializabl
       });
 
 
+
    }
+    public void filtrar()
+    {
+        tablaPartidos.setItems(filtrarTexto2.filtrar(filtrarTexto.getText()));
+
+
+    }
+
 }

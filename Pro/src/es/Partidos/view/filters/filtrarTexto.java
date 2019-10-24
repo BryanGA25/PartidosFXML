@@ -12,26 +12,25 @@ public class filtrarTexto {
 
     public filtrarTexto(ObservableList<Partidos> listaPartidos) {
         this.listaPartidos = listaPartidos;
-        listaPartidos = FXCollections.observableArrayList();
+        listaPartidosFiltrada = FXCollections.observableArrayList();
     }
 
-    public ObservableList<Partidos> filtrar(String divFiltrada) {
-        if (divFiltrada != null && !"".equals(divFiltrada)) {
+    public ObservableList<Partidos> filtrar(String nombreEquipo) {
+        if (nombreEquipo != null && !"".equals(nombreEquipo)) {
 
-
-            return listaPartidos;
-
-        } else {
             listaPartidosFiltrada.clear();
             for (Partidos partidos : listaPartidos) {
-                if (partidos.getLocal().contains(divFiltrada)) {
+                if (partidos.getLocal().contains(nombreEquipo))
                     listaPartidosFiltrada.add(partidos);
-
-                }
-
             }
-                return listaPartidosFiltrada;
+            return listaPartidosFiltrada;
+
+
+        }
+        else {
+                return listaPartidos;
+            }
         }
 
     }
-}
+

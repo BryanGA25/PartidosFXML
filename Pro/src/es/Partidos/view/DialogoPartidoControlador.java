@@ -20,7 +20,7 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class DialogoPartidoControlador implements Initializable {
+public class DialogoPartidoControlador extends BaseController implements Initializable {
 
     private Partidos partidoModificar;
     private int indiceModificar;

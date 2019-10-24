@@ -31,16 +31,16 @@
                   <cellValueFactory><PropertyValueFactory property="Local" /> </cellValueFactory>
                 </TableColumn>
                 <TableColumn fx:id="TCVisitante" prefWidth="117.0" text="Visitante">
-                  <cellValueFactory><PropertyValueFactory property="Local" /></cellValueFactory>
+                  <cellValueFactory><PropertyValueFactory property="visitante" /></cellValueFactory>
               </TableColumn>
                   <TableColumn fx:id="TCResultado" prefWidth="79.0" text="Resultado">
-                <cellValueFactory><PropertyValueFactory property="Local" /></cellValueFactory>
+                <cellValueFactory><PropertyValueFactory property="resul" /></cellValueFactory>
             </TableColumn>
                   <TableColumn fx:id="TCDivision" prefWidth="77.0" text="Division">
-             <cellValueFactory><PropertyValueFactory property="Local" /></cellValueFactory>
+             <cellValueFactory><PropertyValueFactory property="division" /></cellValueFactory>
          </TableColumn>
                   <TableColumn fx:id="TCFecha" prefWidth="118.0" text="Fecha">
-        <cellValueFactory><PropertyValueFactory property="Local" /></cellValueFactory>
+        <cellValueFactory><PropertyValueFactory property="date" /></cellValueFactory>
     </TableColumn>
               </columns>
             </TableView>
