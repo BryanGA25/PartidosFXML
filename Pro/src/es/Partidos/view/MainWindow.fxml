@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
@@ -17,7 +18,7 @@
         <Menu mnemonicParsing="false" text="Partidos">
           <items>
             <MenuItem fx:id="menuAlta" mnemonicParsing="false" onAction="#altaPartido" text="AltaPartidos" />
-                  <MenuItem fx:id="menuBorrar" mnemonicParsing="false" onAction="#altaPartido" text="BorrarPartidos" />
+                  <MenuItem fx:id="menuBorrar" mnemonicParsing="false" onAction="#borrarPartido" text="BorrarPartidos" />
                   <MenuItem fx:id="menuModificar" mnemonicParsing="false" onAction="#modificarPartido" text="ModificarPartidos" />
           </items>
         </Menu>
@@ -25,7 +26,7 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <TableView fx:id="tablaPartidos" layoutX="35.0" layoutY="60.0" prefHeight="381.0" prefWidth="559.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="46.0" AnchorPane.topAnchor="60.0">
+            <TableView fx:id="tablaPartidos" layoutX="35.0" layoutY="60.0" prefHeight="292.0" prefWidth="559.0" AnchorPane.bottomAnchor="99.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="46.0" AnchorPane.topAnchor="60.0">
               <columns>
                 <TableColumn fx:id="TCLocal" prefWidth="123.0" text="Local">
                   <cellValueFactory><PropertyValueFactory property="Local" /> </cellValueFactory>
@@ -45,6 +46,9 @@
               </columns>
             </TableView>
             <TextField fx:id="filtrarTexto" layoutX="35.0" layoutY="21.0" prefHeight="25.0" prefWidth="559.0" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="21.0" />
+            <Button layoutX="35.0" layoutY="376.0" mnemonicParsing="false" onAction="#altaPartido" text="Crear Partido" AnchorPane.bottomAnchor="50.0" />
+            <Button layoutX="171.0" layoutY="376.0" mnemonicParsing="false" onAction="#modificarPartido" text="Modificar Parrtido" AnchorPane.bottomAnchor="50.0" />
+            <Button layoutX="320.0" layoutY="376.0" mnemonicParsing="false" onAction="#borrarPartido" text="Borrar Partido" textFill="RED" AnchorPane.bottomAnchor="50.0" />
          </children>
     </AnchorPane>
   </children>

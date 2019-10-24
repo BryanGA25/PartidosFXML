@@ -46,7 +46,7 @@ public class MainWindowController extends BaseController implements Initializabl
     @FXML
     void  modificarPartido(ActionEvent event){
 
-        DialogoPartidoControlador controlador=(DialogoPartidoControlador)cargarDialogo("DialogoPartido.fxml",550,450);
+        DialogoPartidoControlador controlador=(DialogoPartidoControlador)cargarDialogo("DialogoPartido.fxml",700,450);
         Partidos partido=tablaPartidos.getSelectionModel().getSelectedItem();
         controlador.setPartidoModificado(partido);
         controlador.abrirDialogo(true);
@@ -77,4 +77,7 @@ public class MainWindowController extends BaseController implements Initializabl
 
     }
 
+    public void borrarPartido(ActionEvent event) {
+        Logica.getINSTANCE().borraPartido(tablaPartidos.getSelectionModel().getSelectedItem());
+    }
 }
