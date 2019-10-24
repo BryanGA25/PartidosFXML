@@ -25,7 +25,7 @@ import java.net.URL;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
-public class MainWindowController implements Initializable {
+public class MainWindowController extends BaseController implements Initializable {
 
     private es.Partidos.view.filters.filtrarTexto filtrarTexto2;
 
@@ -40,35 +40,13 @@ public class MainWindowController implements Initializable {
 
     @FXML
     void altaPartido(ActionEvent event) {
-
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("DialogoPartido.fxml"));
-            Stage stage =new Stage();
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setTitle("Pantalla Principal");
-            stage.setScene(new Scene( root,650,450));
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        cargarDialogo("FormularioPartidos.fxml", 700, 500).abrirDialogo(true);
 
     }
     @FXML
     void  modificarPartido(ActionEvent event){
-        try {
-            FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("DialogoPartido.fxml"));
-            Parent root = fxmlLoader.load();
-            DialogoPartidoControlador controlador= fxmlLoader.getController();
-            Partidos partidoMo=tablaPartidos.getSelectionModel().getSelectedItem();
-            controlador.setPartidoModificado(partidoMo);
-            Stage stage =new Stage();
-            stage.setTitle("Pantalla Principal");
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setScene(new Scene( root,650,450));
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+
 
     }
 
