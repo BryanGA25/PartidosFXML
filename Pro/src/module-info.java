@@ -1,5 +1,6 @@
 module Pro {
 
+    requires org.controlsfx.controls;
     requires javafx.controls;
     requires  javafx.graphics;
     requires javafx.fxml;

@@ -17,10 +17,10 @@ public class filtrarTexto {
     }
 
 
-   public ObservableList<Partidos> filtrarDivision(String divisionFiltrar) {
+   public ObservableList<Partidos> filtrarDivision(Division divisionFiltrar) {
         ObservableList<Partidos> aux = FXCollections.observableArrayList();
         for (Partidos partido : listaPartidos) {
-            if(partido.getDivision().toString().equalsIgnoreCase(divisionFiltrar)){
+            if(partido.getDivision()==(divisionFiltrar)){
                 aux.add(partido);
             }
         }

@@ -39,8 +39,9 @@ public class MainWindowController extends BaseController implements Initializabl
 
     @FXML
     void altaPartido(ActionEvent event) {
-        cargarDialogo("FormularioPartidos.fxml", 700, 500).abrirDialogo(true);
+        cargarDialogo("DialogoPartido.fxml", 700, 500).abrirDialogo(true);
         filtrarDiv();
+
     }
     @FXML
     void  modificarPartido(ActionEvent event){
@@ -66,8 +67,8 @@ public class MainWindowController extends BaseController implements Initializabl
    }
 
    public void filtrarDiv(){
-        String divisionFiltrar = (String) comboDivision.getValue();
-        tablaPartidos.setItems(filtrarTexto2.filtrarDivision(divisionFiltrar));
+
+        tablaPartidos.setItems(filtrarTexto2.filtrarDivision((Division) comboDivision.getValue()));
 
    }
 

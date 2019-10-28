@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dcac92a6-b399-41bd-85cb-699c9dca5ab0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/javafx_swt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/javafx_swt.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pro/es/Partidos/view/DialogoPartido.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pro/es/Partidos/view/DialogoPartido.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Pro/es/Partidos/view/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pro/es/Partidos/view/MainWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/Partidos/view/DialogoPartido.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/Partidos/view/DialogoPartido.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/es/Partidos/view/DialogoPartidoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/Partidos/view/DialogoPartidoControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/es/Partidos/view/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/Partidos/view/MainWindow.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/es/Partidos/view/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/Partidos/view/MainWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/Partidos/view/filters/filtrarTexto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/Partidos/view/filters/filtrarTexto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module-info.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +34,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Partido2" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Java/javafx-sdk-13/lib/controlsfx-11.0.0.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -68,6 +72,7 @@
     <configuration name="Launcher (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="es.Partidos.Launcher" />
       <module name="Pro" />
+      <option name="VM_PARAMETERS" value="--add-opens=javafx.graphics/javafx.scene=org.controlsfx.controls" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="es.Partidos.*" />
@@ -104,6 +109,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Launcher" />
+      <item itemvalue="Application.Launcher (1)" />
+      <item itemvalue="Application.Tabla" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Launcher (1)" />
@@ -137,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571935553809</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Filtrados &quot;completo&quot;">
+      <created>1571938031660</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571938031660</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

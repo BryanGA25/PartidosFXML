@@ -5,6 +5,8 @@ import es.Partidos.logica.Utils;
 import es.Partidos.model.Division;
 import es.Partidos.model.Partidos;
 import es.Partidos.model.Resultado;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -13,6 +15,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import org.controlsfx.validation.ValidationSupport;
+import org.controlsfx.validation.Validator;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -22,6 +26,9 @@ public class DialogoPartidoControlador extends BaseController implements Initial
     private Partidos partidoModificar;
     private int indiceModificar;
 
+
+    @FXML
+    private Button botonAceptar;
 
     @FXML
     private TextField tfLocal;
@@ -55,6 +62,8 @@ public class DialogoPartidoControlador extends BaseController implements Initial
 
 
     public void altaModificarPartido(ActionEvent event) {
+
+
         if (partidoModificar == null) {
             Partidos partido = new Partidos(tfLocal.getText(),
                     tfVisitante.getText(),
@@ -78,9 +87,24 @@ public class DialogoPartidoControlador extends BaseController implements Initial
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        ValidationSupport validationsupport=new ValidationSupport();
+        validationsupport.registerValidator(tfLocal, Validator.createEmptyValidator("Nombre equipo local vacio"));
+        validationsupport.registerValidator(tfVisitante, Validator.createEmptyValidator("Nombre equipo visitante vacio"));
+        validationsupport.registerValidator(tfResulLocal, Validator.createEmptyValidator("Resultado equipo local vacio"));
+        validationsupport.registerValidator(tfResultadoVisitante, Validator.createEmptyValidator("Resultado equipo visante vacio"));
+        validationsupport.registerValidator(cbDivision,Validator.createEmptyValidator("No ha seleccionado una division"));
+                validationsupport.registerValidator(dpFecha,Validator.createEmptyValidator("No hay una fecha seleccionada"));
+                validationsupport.invalidProperty().addListener(new ChangeListener<Boolean>() {
+                    @Override
+                    public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                        botonAceptar.setDisable(t1);
+                    }
+                });
 
         ObservableList<Division> options= FXCollections.observableArrayList(Division.primera,Division.segunda,Division.tercera);
         cbDivision.setItems(options);
+
+
 
 
     }
