@@ -4,6 +4,7 @@ import es.Partidos.model.Division;
 import es.Partidos.model.Partidos;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.ComboBox;
 
 public class filtrarTexto {
 
@@ -15,22 +16,17 @@ public class filtrarTexto {
         listaPartidosFiltrada = FXCollections.observableArrayList();
     }
 
-    public ObservableList<Partidos> filtrar(String nombreEquipo) {
-        if (nombreEquipo != null && !"".equals(nombreEquipo)) {
 
-            listaPartidosFiltrada.clear();
-            for (Partidos partidos : listaPartidos) {
-                if (partidos.getLocal().contains(nombreEquipo))
-                    listaPartidosFiltrada.add(partidos);
-            }
-            return listaPartidosFiltrada;
-
-
-        }
-        else {
-                return listaPartidos;
+   public ObservableList<Partidos> filtrarDivision(String divisionFiltrar) {
+        ObservableList<Partidos> aux = FXCollections.observableArrayList();
+        for (Partidos partido : listaPartidos) {
+            if(partido.getDivision().toString().equalsIgnoreCase(divisionFiltrar)){
+                aux.add(partido);
             }
         }
+        return aux;
 
     }
+
+}
 
