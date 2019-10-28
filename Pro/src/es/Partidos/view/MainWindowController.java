@@ -9,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.MenuItem;
@@ -80,4 +81,11 @@ public class MainWindowController extends BaseController implements Initializabl
     public void borrarPartido(ActionEvent event) {
         Logica.getINSTANCE().borraPartido(tablaPartidos.getSelectionModel().getSelectedItem());
     }
+
+
+    public void cerrar(ActionEvent event){
+
+        ((Stage) ((Node) event.getSource()).getScene().getWindow()).close();
+    }
+
 }

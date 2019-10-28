@@ -49,6 +49,7 @@
             <Button layoutX="35.0" layoutY="376.0" mnemonicParsing="false" onAction="#altaPartido" text="Crear Partido" AnchorPane.bottomAnchor="50.0" />
             <Button layoutX="171.0" layoutY="376.0" mnemonicParsing="false" onAction="#modificarPartido" text="Modificar Parrtido" AnchorPane.bottomAnchor="50.0" />
             <Button layoutX="320.0" layoutY="376.0" mnemonicParsing="false" onAction="#borrarPartido" text="Borrar Partido" textFill="RED" AnchorPane.bottomAnchor="50.0" />
+            <Button fx:id="cerrar" layoutX="463.0" layoutY="376.0" mnemonicParsing="false" onAction="#cerrar" prefHeight="26.0" prefWidth="90.0" text="Salir" AnchorPane.bottomAnchor="50.0" />
          </children>
     </AnchorPane>
   </children>
