@@ -20,7 +20,7 @@ public class Logica {
 
     private Partidos partido1=new Partidos("Barcelona","Madrid",resultado,Utils.convertirToDate(Utils.convertirToLocalDate(new Date(12/07/2018))), Division.primera);
     private Partidos partido2=new Partidos("Madrid","Barcelona",resultado,new Date(14/07/2018), Division.primera);
-    private Partidos partido3=new Partidos("Sporting","Oviedo",resultado,new Date(13/07/2018), Division.primera);
+    private Partidos partido3=new Partidos("Sporting","Oviedo",resultado,new Date(13/07/2018), Division.segunda);
     private ObservableList<Partidos> listaPartidos;
     private ArrayList<Partidos> arrayPartidos;
 

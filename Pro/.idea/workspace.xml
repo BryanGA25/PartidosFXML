@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dcac92a6-b399-41bd-85cb-699c9dca5ab0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/javafx_swt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/javafx_swt.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Pro/es/Partidos/view/DialogoPartido.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pro/es/Partidos/view/DialogoPartido.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pro/es/Partidos/view/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pro/es/Partidos/view/MainWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/es/Partidos/view/DialogoPartido.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/Partidos/view/DialogoPartido.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es/Partidos/logica/Logica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/Partidos/logica/Logica.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/es/Partidos/view/DialogoPartidoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/Partidos/view/DialogoPartidoControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/es/Partidos/view/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/Partidos/view/MainWindowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/es/Partidos/view/filters/filtrarTexto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/es/Partidos/view/filters/filtrarTexto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module-info.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571938031660</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Filtrados &quot;completo&quot;">
+      <created>1572277874667</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1572277874667</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

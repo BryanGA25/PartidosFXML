@@ -7,6 +7,8 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
+<?import javafx.collections.FXCollections?>
+<?import es.Partidos.model.Division?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.Partidos.view.DialogoPartidoControlador">
    <children>
       <TextField fx:id="tfLocal" layoutX="310.0" layoutY="46.0" prefHeight="25.0" prefWidth="239.0" promptText="Nombre Equipo Local" />
@@ -20,6 +22,13 @@
       <Button fx:id="botonAceptar" layoutX="44.0" layoutY="361.0" mnemonicParsing="false" onAction="#altaModificarPartido" text="Crear Partido" />
       <DatePicker fx:id="dpFecha" layoutX="310.0" layoutY="274.0" prefHeight="31.0" prefWidth="250.0" />
       <ComboBox fx:id="cbDivision" layoutX="310.0" layoutY="223.0" prefHeight="25.0" prefWidth="239.0" promptText="Division">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <Division fx:id="Primera" fx:value="primera"/>
+               <Division fx:id="Segunda" fx:value="segunda"/>
+               <Division fx:id="Tercera" fx:value="tercera"/>
+            </FXCollections>
+         </items>
       </ComboBox>
 
       <Label layoutX="44.0" layoutY="227.0" text="Division" />

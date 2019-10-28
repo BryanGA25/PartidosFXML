@@ -24,8 +24,6 @@ import java.util.ResourceBundle;
 public class DialogoPartidoControlador extends BaseController implements Initializable {
 
     private Partidos partidoModificar;
-    private int indiceModificar;
-
 
     @FXML
     private Button botonAceptar;
@@ -93,16 +91,16 @@ public class DialogoPartidoControlador extends BaseController implements Initial
         validationsupport.registerValidator(tfResulLocal, Validator.createEmptyValidator("Resultado equipo local vacio"));
         validationsupport.registerValidator(tfResultadoVisitante, Validator.createEmptyValidator("Resultado equipo visante vacio"));
         validationsupport.registerValidator(cbDivision,Validator.createEmptyValidator("No ha seleccionado una division"));
-                validationsupport.registerValidator(dpFecha,Validator.createEmptyValidator("No hay una fecha seleccionada"));
-                validationsupport.invalidProperty().addListener(new ChangeListener<Boolean>() {
-                    @Override
-                    public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
-                        botonAceptar.setDisable(t1);
-                    }
-                });
-
+        validationsupport.registerValidator(dpFecha,Validator.createEmptyValidator("No hay una fecha seleccionada"));
+        validationsupport.invalidProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                botonAceptar.setDisable(t1);
+            }
+        });
         ObservableList<Division> options= FXCollections.observableArrayList(Division.primera,Division.segunda,Division.tercera);
         cbDivision.setItems(options);
+
 
 
 
